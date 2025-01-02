@@ -6,8 +6,8 @@
 
 main()
 {
-  int c;
+	int c;
 
-  c = getchar() != EOF; /* equivalent to c = (getchar() != EOF) */
-  printf("getchar() != EOF is %d\n", c);
+	c = getchar() != EOF; /* equivalent to c = (getchar() != EOF) */
+	printf("getchar() != EOF is %d\n", c);
 }

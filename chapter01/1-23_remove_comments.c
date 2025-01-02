@@ -20,50 +20,50 @@ void check_not_EOF(char);
  */
 main()
 {
-  char c;
+	char c;
 
-  while ((c = getchar()) != EOF) {
-    if (c == '/') {
-      c = getchar();
-      check_not_EOF(c);
-      if (c == '*') /* we are inside a comment */
-        erase_comment();
-      else
-        printf("/%c", c);
-    } else {
-      putchar(c);
-    }
-  }
+	while ((c = getchar()) != EOF) {
+		if (c == '/') {
+			c = getchar();
+			check_not_EOF(c);
+			if (c == '*') /* we are inside a comment */
+				erase_comment();
+			else
+				printf("/%c", c);
+		} else {
+			putchar(c);
+		}
+	}
 
-  exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
 
 void erase_comment(void)
 {
-  char c;
+	char c;
 
-  while ((c = getchar()) != EOF) {
-    if (c == '*') { /* *marks potential ending */
-      c = getchar();
-      check_not_EOF(c);
-      if (c == '/') /* finishing slash, end comment */
-        break;
-    }
-  }
-  /* check that we ended the while loop by finishing the comment */
-  check_not_EOF(c);
-  c = getchar();
-  if (c == EOF)
-    /* in this case we end in success since this case marks a
-     * file finishing in a comment
-     */
-    exit(EXIT_SUCCESS);
-  putchar(c);
+	while ((c = getchar()) != EOF) {
+		if (c == '*') { /* *marks potential ending */
+			c = getchar();
+			check_not_EOF(c);
+			if (c == '/') /* finishing slash, end comment */
+				break;
+		}
+	}
+	/* check that we ended the while loop by finishing the comment */
+	check_not_EOF(c);
+	c = getchar();
+	if (c == EOF)
+		/* in this case we end in success since this case marks a
+		 * file finishing in a comment
+		 */
+		exit(EXIT_SUCCESS);
+	putchar(c);
 }
 
 void check_not_EOF(char c)
 {
-  if (c == EOF)
-    /* we got to EOF before finishing the comment */
-    exit(EXIT_FAILURE);
+	if (c == EOF)
+		/* we got to EOF before finishing the comment */
+		exit(EXIT_FAILURE);
 }

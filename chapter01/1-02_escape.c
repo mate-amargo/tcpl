@@ -7,7 +7,7 @@
 
 main ()
 {
-  /*printf("hello,\c world\n");*/
-  printf("hello,\t world\n");
+	/*printf("hello,\c world\n");*/
+	printf("hello,\t world\n");
 
 }

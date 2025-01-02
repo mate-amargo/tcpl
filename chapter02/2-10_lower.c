@@ -11,18 +11,18 @@ int lower(int);
 int main()
 {
 
-  char *myText = "I'm a BIG Potato";
-  int i;
+	char *myText = "I'm a BIG Potato";
+	int i;
 
-  for (i = 0; myText[i] != '\0'; i++)
-    printf("%c", lower(myText[i]));
+	for (i = 0; myText[i] != '\0'; i++)
+		printf("%c", lower(myText[i]));
 
-  putchar('\n');
+	putchar('\n');
 
-  return 0;
+	return 0;
 }
 
 int lower(int c)
 {
-  return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c;
+	return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c;
 }

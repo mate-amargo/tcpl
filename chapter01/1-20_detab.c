@@ -12,14 +12,14 @@
 
 main()
 {
-  int i, c;
+	int i, c;
 
-  while ((c = getchar()) != EOF)
-    if (c == '\t')
-      for (i = 0; i < TABSTOP; i++)
-        printf(" ");
-    else
-      putchar(c);
+	while ((c = getchar()) != EOF)
+		if (c == '\t')
+			for (i = 0; i < TABSTOP; i++)
+				printf(" ");
+		else
+			putchar(c);
 
-  return 0;
+	return 0;
 }

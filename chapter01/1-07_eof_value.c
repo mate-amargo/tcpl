@@ -6,5 +6,5 @@
 
 main()
 {
-  printf("EOF = %d\n", EOF);
+	printf("EOF = %d\n", EOF);
 }
