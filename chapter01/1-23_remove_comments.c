@@ -1,11 +1,7 @@
-/*    --- remove_comments ---
- * This program removes C-style comments from a C program.
- * I'll try to do this without reading line by line, but rather
- * character by character.
- * TODO: Right now a comment standing on its own line (either proceeded
- * or succeeded by whitespace produces a visually empty line
- * (technically it's not empty since it will have whitespace). Try
- * to completely remove such lines.
+/*
+ * Exercise 1-23. Write a program to remove all comments from a C program.
+ * Don't forget to handle quoted strings and character constants properly. C
+ * comments do not nest. □
  */
 
 #include <stdio.h>
@@ -14,6 +10,14 @@
 void erase_comment(void);
 void check_not_EOF(char);
 
+/* This program removes C-style comments from a C program.
+ * I'll try to do this without reading line by line, but rather
+ * character by character.
+ * TODO: Right now a comment standing on its own line (either proceeded
+ * or succeeded by whitespace produces a visually empty line
+ * (technically it's not empty since it will have whitespace). Try
+ * to completely remove such lines.
+ */
 main()
 {
   char c;

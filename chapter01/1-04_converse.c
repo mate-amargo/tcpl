@@ -1,3 +1,8 @@
+/*
+ * Exercise 1-4. Write a program to print the corresponding Celsius to
+ * Farenheit table. □
+ */
+
 #include <stdio.h>
 
 main()
