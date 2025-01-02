@@ -1,6 +1,7 @@
 /*
- * Rewrite the functinon lower, which converts upper case letters to
- * lower case, with a conditional expression instead of an if-else.
+ * Exercise 2-10. Rewrite the functinon lower, which converts upper case
+ * letters to lower case, with a conditional expression instead of an if-else.
+ * □
  */
 
 #include <stdio.h>

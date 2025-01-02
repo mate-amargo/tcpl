@@ -1,6 +1,8 @@
 /*
- * Write an alternate version of squeeze(s1, s2) that deletes each charcter in
- * s1 that matches any character in the string s2.
+ * Exercise 2-5. Write the function any(s1,s2), which returns the first
+ * location in the string s1 where any character from the string s2 occurs, or
+ * -1 if s1 contains no characters from s2. (The standard library function
+ *  strpbrk does the same job but returns a pointer to the location.) □
  */
 
 #include <stdio.h>
