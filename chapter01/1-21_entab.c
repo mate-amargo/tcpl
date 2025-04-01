@@ -9,29 +9,26 @@
 
 #define TABSTOP 4
 
-
-/* give preference to white space. */
+/* give preference to tabs. */
 main()
 {
-	int i, j, c;
-	char buffer[TABSTOP-1];
+	int i, c, col, spaces;
 
-	i = 0;
+	col = 0; spaces = 0;
 	while ((c = getchar()) != EOF)
 		if (c == ' ') {
-			if (i < TABSTOP-1)
-				buffer[i++] = c;
-			else {
+			spaces++;
+			if ((col+spaces) % TABSTOP == 0) {
 				putchar('\t');
-				i = 0;
+				spaces = 0;
 			}
 		} else {
-			if (i > 0){
-				for (j = 0; j < i; j++)
-					putchar(buffer[j]);
-				i = 0;
+			while (spaces > 0) {
+				putchar(' ');
+				spaces--;
 			}
 			putchar(c);
+			col = (c == '\n') ? 0 : col+1;
 		}
 
 	return 0;

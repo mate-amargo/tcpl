@@ -9,17 +9,21 @@
 
 #define TABSTOP 4
 
-
 main()
 {
-	int i, c;
+	int i, c, col = 0, spaces;
 
 	while ((c = getchar()) != EOF)
-		if (c == '\t')
-			for (i = 0; i < TABSTOP; i++)
-				printf(" ");
-		else
+		if (c == '\t') {
+			spaces = TABSTOP - (col % TABSTOP);
+			for (i = 0; i < spaces; i++) {
+				putchar(' ');
+				col++;
+			}
+		} else {
 			putchar(c);
+			col = (c == '\n') ? 0 : col+1;
+		}
 
 	return 0;
 }
